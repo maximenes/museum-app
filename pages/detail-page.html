@@ -1,5 +1,6 @@
 <!doctype html>
     <head>
+        <script src="detail-page.js"></script>
         <title>This is Brazil</title>
     </head>
     <body>
@@ -9,6 +10,30 @@
                 <h1>This is Brazil, by Cranio></h1>
                 <img src="https://i.pinimg.com/originals/89/ae/fd/89aefd1b3707d71375e017cee10c0625.png">
             </section>
+
+            <section id='comments'>
+                <h2>Comments</h2>
+            
+                <section class='comment'>
+                  <h3>Maira said:</h3>
+                  <p>"This is definitely one of my favorites!"</p>
+                </section>
+              </section>
+            
+              <form onsubmit="submitComment(); return false">
+                <div class="formSection">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name">
+                </div>
+                <div class="formSection">
+                  <label for="msg">Message:</label>
+                  <textarea id="msg"></textarea>
+                </div>
+                <div class="button">
+                  <button type="default">Post your comment</button>
+                </div>
+              </form>
+              
         </main>
         <footer>
             <p>Made with love at Codaisseur</p>
