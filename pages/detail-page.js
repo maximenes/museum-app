@@ -1,10 +1,35 @@
 // add event handler
+function doesNotPassAllValidations(name,msg) {
+
+
+    if (!name || !msg) {
+        alert('Your forgot to fill in your name or message!')
+        return true
+    }
+
+    if (msg.length > 280) {
+        alert('Comments must be 280 characters or less.')
+        return true
+    } 
+    
+    return false
+}
+
 function submitComment() {
     // gather data
+
     const inputField = document.getElementById('name')
     const name = inputField.value
+    console.log(name)
+
     const textArea = document.getElementById('msg')
     const msg = textArea.value
+    console.log(msg)
+
+    // check if user input passes validations
+    if(doesNotPassAllValidations(name,msg)){
+        return null
+    }
     
     // create the elements you need
     const comment = document.createElement('section')
